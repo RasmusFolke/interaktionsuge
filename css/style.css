@@ -1,0 +1,513 @@
+/* Global */
+
+*{ 	
+	box-sizing: border-box;
+	font-size: 100%; /* Brug em til størrelsesforhold */
+	font-family: "arial", sans-serif;
+}
+
+body{
+	width: 100%;
+}
+
+header{
+	background-color: #067233;
+	border: 3px solid #00FF1D;
+}
+
+header nav{
+	border-bottom: 1px solid #067233;
+	text-align: right;
+	height: 70px;
+	line-height: 70px;
+}
+
+.menu{
+	margin: 0 30px 0 0;
+}
+
+header nav ul{
+	list-style: none;
+}
+
+header nav a{
+	position: relative;
+	width: 100%;
+	background-color: #00BD23;
+	border-radius: 20px;
+	clear: right;
+	text-decoration: none;
+	padding: 0px 40px;
+	color: orange;
+	margin: 0 5px;
+	line-height: 70px;
+	font-size: 1.250em;
+	font-weight: bold;
+}
+
+label{
+	margin: 0 30px 0 0;
+	font-size: 1.625em;
+	line-height: 70px;
+	display: none;
+	width: 26px;
+	float: right;
+}
+
+#toggle{
+	display: none;
+}
+
+#logo{
+	float: left;
+	position: absolute;
+	left: 20px;
+}
+
+/* Kun mobil fra 0-767px */
+@media (max-width: 767px) {	
+	footer{
+		display: none;
+	}
+	
+	.bannerbillede{
+		display: none;
+	}
+	
+	.tabletplus{
+		display: none;
+	}
+	
+	.overskriftbillede{
+		display: none;
+	}
+	
+	.mainbestilcontentpc{
+		display: none;
+	}
+	
+	#bestilknapbestilside{
+		display: none;
+	}
+	
+	main{
+		width: 100%;
+	}
+	
+	
+	.mobilforside{
+		width: 100%;
+		background-image: url(../images/sri-lanka-strand-farve-blur.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		z-index: -1;
+	}
+	
+	.containerformular{
+		z-index: -1;
+		width: 100%;
+		border: 3px solid #00FF1D;
+		font-size: 2em;
+		color: orange;
+		line-height: 50px;
+		margin: auto;
+	}
+	
+	.containerformular h1{
+		margin-top: 30px;
+	}
+	
+	.containerformularmobilbestil{
+		z-index: -1;
+		width: 100%;
+		border: 3px solid #00FF1D;
+		font-size: 2em;
+		color: orange;
+		line-height: 50px;
+		margin: auto;
+	}
+	
+	.containerformularmobilbestil h1{
+		margin-top: 30px;
+	}
+	
+	#bestilknap{
+		margin-bottom: 0;
+		width: 100%;
+		background-color: #067233;
+		border: 2px solid #00FF1D;
+	}
+	
+	#bestilknap a{
+		font-size: 2em;
+		text-decoration: none;
+		color: orange;
+	}
+	
+	label{
+		display: block;
+		cursor: pointer;
+	}
+	
+	.menu{
+		text-align: center;
+		width: 100%;
+		display: none;
+	}
+	
+	.menu a{
+		display: block;
+		border-bottom: 1px solid #00FF1D;
+		margin: 0;
+	}
+	
+	#toggle:checked + .menu{
+		display: block;
+	}
+	
+	.pcramme{
+		border: 5px solid #00FF1D;
+		margin-top: 5%;
+		margin-bottom: 5%;
+		background-color: #067233;
+	}
+	
+	.pcramme h2{
+		color: orange;
+		text-align: center;
+		font-size: 2em;
+	}
+	
+	.pcramme p{
+		padding: 2%;
+	}
+	
+	.overskrift1{
+		font-size: 3em;
+		margin: 0;
+		color: orange;
+	}
+	
+	.mainrejser #overskrift{
+		background-color: #067233;
+		font-size: 3em;
+		color: orange;
+		margin: 0;
+		text-align: center;
+		padding: 1%;
+	}
+	
+	.mainrejser p{
+		background-color: #067233;
+		margin: 0;
+		color: white;
+		font-weight: bold;
+		font-size: 12px;
+	}
+	
+	.mainrejser img{
+		width: 100%;
+		border-bottom: 3px solid #00FF1D;
+	}
+	
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 4px;
+		justify-content: space-between;
+	}
+	
+	.rowbestilmobil{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		flex-wrap: wrap;
+	}
+	
+	.rowbestilmobil img{
+		width: 33%;
+	}
+	
+	#skildpaddegrow{
+		flex-grow: 3
+	}
+	
+	#familiecykler{
+		margin-top: 25%;
+	}
+	
+	#barnflyver{
+		height: 225px;
+	}
+	
+	#skildpadde{
+		width: 100%;
+		padding: 0 4px;
+	}
+	
+	footer{
+		background-color: orange;
+		width: 100%;
+		overflow: auto;
+	}
+	
+	footer div{
+		float: left;
+		width: 33%;
+	} 
+}
+	
+/* Størrelse for Ipad fra 768px og op*/
+@media (min-width: 767px){
+	
+	#menuicon{
+		display: none;
+	}
+	
+	.containerformular{
+		display: none;
+	}
+	
+	#bestilknap{
+		display: none;
+	}
+	
+	.mainbestilcontentmobil{
+		display: none;
+	}
+	
+	.billedetekstcontainer{
+		position: relative;
+		text-align: center;
+	}
+	
+	.overskriftbillede{
+		position: absolute;
+		top: 10%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.billedetekstcontainer h1{
+		font-size: 1.9em;
+		font-weight: bold;
+		color: orange;
+	}
+	
+	.mainbestilcontentpc h1{
+		text-align: center;
+		color: orange;
+		font-size: 2.5em;
+	}
+	
+	.bannerbillede{
+		position: relative;
+		z-index: -1;
+		width: 100%;
+}
+	.flexbox1{
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	
+	.drengmedhat{
+		height: 600px;
+	}
+	
+	.familiecykel{
+		float: right;
+		width: 40%;
+	}
+	
+	.skildpadde{
+		width: 100%;
+	}
+	
+	article h1{
+		font-size: 2em;
+	}
+	
+	
+	.srilanka{
+		border: 5px solid orange;
+	}
+	
+	.mainrejser{
+		background-image: url(../images/sri-lanka-strand-farve-blur.jpg);
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+
+	.mainrejser h2{
+		font-size: 2em;
+		background-color: #067233;
+		margin: 0;
+		color: orange;
+		text-align: center;
+		border-bottom: 4px solid #00FF1D;
+		padding: 1%;
+	}
+	
+	.mainrejser #overskrift{
+		background-color: #067233;
+		text-align: center;
+		font-size: 3em;
+		color: orange;
+		margin: 0;
+		padding: 1%;
+	}
+	
+	.mainrejser p{
+		margin: 0;
+		color: black;
+		font-weight: bold;
+		font-size: 1em;
+		overflow: hidden;
+		padding: 3%;
+		
+	}
+	
+
+	.pcramme{
+		border: 5px solid orange;
+		background-color: #067233;
+		height: 650px;
+		margin-bottom: 5%;
+		margin-top: 5%;
+	}
+	
+	.row{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 4px;
+		justify-content: space-between;
+	}
+	
+	.column {
+    flex: 50%;
+    max-width: 50%;
+    padding: 0 4px;
+	}
+	
+	.column .mainbestil img{
+		vertical-align: middle;
+		border-bottom: 4px solid yellow;
+	}
+
+	.column .mainrejer img {
+    vertical-align: middle;
+	height: 200px;
+	border-bottom: 4px solid yellow;
+	
+	}
+	
+	.columnpc {
+    	flex: 50%;
+    	max-width: 50%;
+    	padding: 0 4px;
+	}
+	
+	.columnpc img{
+		vertical-align: middle;
+		width: 100%;
+		height: 275px;
+	}
+	
+	.containerformularbestil{
+		z-index: -1;
+		width: 100%;
+		border: 3px solid #00FF1D;
+		font-size: 2em;
+		color: orange;
+		line-height: 50px;
+		margin: auto;
+		background-image: url(../images/sri-lanka-strand-farve-blur.jpg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+	
+	.containerformularbestil h1{
+		margin: 20px 10px 20px 0;
+	}
+	
+	.containerformularbestil input{
+		margin: 20px 10px 20px 10px;
+	}
+	
+	#bestilknapbestilside{
+		margin-bottom: 0;
+		width: 100%;
+		background-color: #067233;
+		border: 2px solid orange;
+	}
+	
+	#bestilknapbestilside a{
+		font-size: 2em;
+		text-decoration: none;
+		color: orange;
+	}
+	
+	label{
+		display: block;
+		cursor: pointer;
+	}
+	
+		
+	footer{
+		background-color: orange;
+		overflow: auto;
+		width: 100%;
+}
+
+	footer div{
+		float: left;
+		width: 30%;
+		margin-left: 3%;
+} 
+	
+}
+
+@media (min-width: 840px){
+	
+	.billedetekstcontainer h1{
+		font-size: 2em;
+		font-weight: bold;
+		color: orange;
+	}
+}
+
+@media (min-width: 1024px){
+	
+	.billedetekstcontainer h1{
+		font-size: 2.5em;
+		font-weight: bold;
+		color: orange;
+		border: 5px solid yellow;
+		border-radius: 5px;
+		padding: 3px; 
+	}
+}	
+	
+@media (min-width: 1068px){
+	
+	.overskriftbillede{
+		position: absolute;
+		top: 12%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	.billedetekstcontainer h1{
+		font-size: 2.8em;
+		font-weight: bold;
+		color: orange;
+		border: 5px solid yellow;
+		border-radius: 5px;
+		padding: 3px; 
+	}
+	
+}
